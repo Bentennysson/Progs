@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Casio Calculator</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <header class="app-header">
+                <h1>Casio Calculator</h1>
+                <p>Enter numbers and operators to calculate the result.</p>
+            </header>
+
+            <section class="card">
+                <div class="form-group">
+                    <label for="expression">Enter an expression</label>
+                    <input id="expression" type="text" placeholder="e.g. 2 + 3 * (4 - 1)" />
+                </div>
+
+                                <div class="card mt-2">
+                                    <strong>Operators</strong>
+                                    <div style="margin-top:0.5rem; display:flex; gap:0.5rem; flex-wrap:wrap">
+                                        <button class="insert-btn button secondary" data-insert="+">+</button>
+                                        <button class="insert-btn button secondary" data-insert="-">−</button>
+                                        <button class="insert-btn button secondary" data-insert="*">×</button>
+                                        <button class="insert-btn button secondary" data-insert="/">÷</button>
+                                        <button class="insert-btn button secondary" data-insert="^">^</button>
+                                        <button class="insert-btn button secondary" data-insert="%">%</button>
+                                        <button class="insert-btn button secondary" data-insert="(">(</button>
+                                        <button class="insert-btn button secondary" data-insert=")">)</button>
+                                        <button class="insert-btn button secondary" data-insert=",">,</button>
+                                    </div>
+                                    <div style="margin-top:0.5rem">
+                                        <label for="angle-mode" style="font-weight:600">Angle unit:</label>
+                                        <select id="angle-mode" style="margin-left:0.5rem">
+                                            <option value="rad">Radians</option>
+                                            <option value="deg">Degrees</option>
+                                        </select>
+                                    </div>
+
+                                    <div style="margin-top:0.75rem"><strong>Functions</strong></div>
+                                    <div style="margin-top:0.5rem; display:flex; gap:0.5rem; flex-wrap:wrap">
+                                        <button class="insert-btn button secondary" data-insert="sin(">sin(</button>
+                                        <button class="insert-btn button secondary" data-insert="cos(">cos(</button>
+                                        <button class="insert-btn button secondary" data-insert="tan(">tan(</button>
+                                        <button class="insert-btn button secondary" data-insert="asin(">asin(</button>
+                                        <button class="insert-btn button secondary" data-insert="acos(">acos(</button>
+                                        <button class="insert-btn button secondary" data-insert="atan(">atan(</button>
+                                        <button class="insert-btn button secondary" data-insert="sqrt(">sqrt(</button>
+                                        <button class="insert-btn button secondary" data-insert="ln(">ln(</button>
+                                        <button class="insert-btn button secondary" data-insert="log10(">log10(</button>
+                                        <button class="insert-btn button secondary" data-insert="exp(">exp(</button>
+                                        <button class="insert-btn button secondary" data-insert="pow(">pow(</button>
+                                        <button class="insert-btn button secondary" data-insert="max(">max(</button>
+                                        <button class="insert-btn button secondary" data-insert="min(">min(</button>
+                                    </div>
+                                    <div style="margin-top:0.75rem"><strong>Constants / Imaginary</strong></div>
+                                    <div style="margin-top:0.5rem; display:flex; gap:0.5rem; flex-wrap:wrap">
+                                        <button class="insert-btn button secondary" data-insert="i">i</button>
+                                        <button class="insert-btn button secondary" data-insert="pi">pi</button>
+                                        <button class="insert-btn button secondary" data-insert="e">e</button>
+                                    </div>
+                                </div>
+
+                <div class="form-group mt-4">
+                    <button id="compute" class="button">Compute</button>
+                    <button id="clear" type="button" class="button secondary">Clear</button>
+                </div>
+
+                <div id="answer" class="card mt-4">
+                    <h3>Answer</h3>
+                    <pre id="output" style="white-space:pre-wrap; margin:0; padding:0.5rem; background:#f8fafc; border-radius:8px;"></pre>
+                </div>
+            </section>
+        </div>
+
+        <script src="calculator.js"></script>
+    </body>
+</html>
