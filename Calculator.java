@@ -29,23 +29,10 @@ public static void Calculate(float values[], String operators)
     for (int i = 0; i < operators.length(); i++) {
         char op = operators.charAt(i);
         float next = values[i+1];
-        switch (op) {
-            case '+':
-                result = result + next;
-                break;
-            case '-':
-                result = result - next;
-                break;
-            case '*':
-                result = result * next;
-                break;
-            case '/':
-                result = result / next;
-                break;
-            default:
-                // unknown operator: no operation
-                break;
-        }
+        if (op == '+')      result = result + next;
+        else if (op == '-') result = result - next;
+        else if (op == '*') result = result * next;
+        else if (op == '/') result = result / next;
     }
     System.out.print("The result is:" + result);
 }
