@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Two_D
+public class Two_DimensionalArray
 {
     public static void main (String args[])
     {
@@ -36,6 +36,7 @@ public class Two_D
 
         for (i= 0; i<= row-1;i++)
         {
+            
             for (j=0;j<=columns-1;j++)
             {
                if (numbers[i][j]==x)
